@@ -1,0 +1,20 @@
+# filepath: /Users/kishanmaurya/Development/Backend/TinyUrl/docker-compose.yml
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+ 
+  nginx:
+    image: nginx:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app
