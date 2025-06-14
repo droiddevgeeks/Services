@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
-import { UrlCdcListenerService } from "./url.service";
 import { UrlShortener, UrlShortenerSchema } from "./model/url.schema";
+import { UrlCdcListenerService } from "./url.cdc.service";
 
 @Module({
   imports: [

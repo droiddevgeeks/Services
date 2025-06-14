@@ -1,4 +1,3 @@
-# filepath: /Users/kishanmaurya/Development/Backend/TinyUrl/Dockerfile
 # Use Node.js as the base image
 FROM node:21-alpine
 
