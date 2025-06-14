@@ -1,4 +1,4 @@
-# Use Node.js as the base image
+# Use Node.js as the base image.
 FROM node:21-alpine
 
 # Set the working directory inside the container

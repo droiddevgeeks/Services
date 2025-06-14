@@ -47,3 +47,5 @@ Thumbs.db
 # Ignore all environment variable files in any subdirectory
 # Ignore all Kubernetes secret files in any subdirectory
 /k8s/app-secret.yaml
+
+.history/

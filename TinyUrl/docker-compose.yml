@@ -1,4 +1,3 @@
-# filepath: /Users/kishanmaurya/Development/Backend/TinyUrl/docker-compose.yml
 services:
   app:
     build:
