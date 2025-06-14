@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdc-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cdc-service
+  template:
+    metadata:
+      labels:
+        app: cdc-service
+    spec:
+      containers:
+        - name: cdc-service
+          image: ghcr.io/droiddevgeeks/cdc-service:latest
+          ports:
+            - containerPort: 4000
+          env:
+            - name: PORT
+              value: "4000"
+            - name: MONGO_URI
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: MONGO_URI
